@@ -1,0 +1,30 @@
+{
+  "name": "inter_tech_defy",
+  "version": "1.0.0",
+  "description": "Desafio técnico INTER",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/talissonmnunes/inter_tech_defy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/talissonmnunes/inter_tech_defy/issues"
+  },
+  "homepage": "https://github.com/talissonmnunes/inter_tech_defy#readme",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-html-reporter": "^4.1.0",
+    "supertest": "^7.1.0"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.26.9",
+    "babel-jest": "^29.7.0",
+    "ts-jest": "^29.3.1"
+  }
+}
