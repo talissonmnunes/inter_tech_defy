@@ -41,7 +41,7 @@ describe('Random cat fact tests schenario', () => {
     })
 
     it('Return fail when max length limit has text value', async () => {
-        const max_length = -100
+        const max_length = "test"
         const status_code_not_found = 404
 
         const response = await request(fixtures.base_url)
@@ -53,7 +53,7 @@ describe('Random cat fact tests schenario', () => {
     })
 
     it('Return fail when max length limit has zero value', async () => {
-        const max_length = -100
+        const max_length = 0
         const status_code_not_found = 404
 
         const response = await request(fixtures.base_url)
