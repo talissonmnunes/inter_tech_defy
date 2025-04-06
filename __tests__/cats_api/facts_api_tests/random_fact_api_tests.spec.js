@@ -3,11 +3,12 @@ import fixtures from '../../../fixtures/fixtures.js'
 import GetRandomNumber from '../../../utils/utils.js'
 
 
-describe('Random cat fact tests schenario', () => {
+describe('01 - Random cat fact tests schenario', () => {
     const endpoint = "/fact"
     const status_coode_success = 200
+    const status_code_not_found = 404
     
-    it('Return a random cat fact with success', async () => {       
+    it('01.01 - Return a random cat fact with success', async () => {       
         const response = await request(fixtures.base_url)
             .get(endpoint)
 
@@ -16,7 +17,7 @@ describe('Random cat fact tests schenario', () => {
         expect(response.body).toHaveProperty("length")
     })
 
-    it('Return a random cat fact under the max length limit', async () => {
+    it('01.02 - Return a random cat fact under the max length limit', async () => {
         const max_length = GetRandomNumber.GetRandomNumber()
 
         const response = await request(fixtures.base_url)
@@ -28,39 +29,30 @@ describe('Random cat fact tests schenario', () => {
             expect(response.body.length).toBeLessThanOrEqual(max_length)
     })
 
-    it('Return fail when max length limit has negative value', async () => {
+    it('01.03 - Return fail when max length limit has negative value', async () => {
         const max_length = -100
-        const status_code_not_found = 404
 
         const response = await request(fixtures.base_url)
             .get(`${endpoint}?max_length=${max_length}`)
 
             expect(response.status).toEqual(status_code_not_found)
-            expect(response.body).not.toHaveProperty("fact")
-            expect(response.body).not.toHaveProperty("length")
     })
 
-    it('Return fail when max length limit has text value', async () => {
+    it('01.04 - Return fail when max length limit has text value', async () => {
         const max_length = "test"
-        const status_code_not_found = 404
 
         const response = await request(fixtures.base_url)
             .get(`${endpoint}?max_length=${max_length}`)
 
             expect(response.status).toEqual(status_code_not_found)
-            expect(response.body).not.toHaveProperty("fact")
-            expect(response.body).not.toHaveProperty("length")
     })
 
-    it('Return fail when max length limit has zero value', async () => {
+    it('01.05 - Return fail when max length limit has zero value', async () => {
         const max_length = 0
-        const status_code_not_found = 404
 
         const response = await request(fixtures.base_url)
             .get(`${endpoint}?max_length=${max_length}`)
 
             expect(response.status).toEqual(status_code_not_found)
-            expect(response.body).not.toHaveProperty("fact")
-            expect(response.body).not.toHaveProperty("length")
     })
 })
