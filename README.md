@@ -20,35 +20,25 @@ Após instalação inicial, para execução dos testes basta rodar o comando *np
 ### Cenário 01 - Retornar fato aleatório sobre gatos
 *Caso de teste 01*
   - Retornar fato aleatório com sucesso.
-> Retorno de fato com sucesso ao executar endpoint devidamente.
-
-> [!NOTE]
+    - Retorno de fato com sucesso ao executar endpoint devidamente.
 > Teste executado com sucesso.
 
 *Caso de teste 02*
   - Retornar um fato aleatório dentro do tamanho máximo informado.
-> Ao informar um valor máximo para o limite de tamanho do fato, deve ser retornado somente fatos que tenham o tamanho igual ou menor que o limite informado.
-
-> [!NOTE]
+    - Ao informar um valor máximo para o limite de tamanho do fato, deve ser retornado somente fatos que tenham o tamanho igual ou menor que o limite informado.
 > Teste executado com sucesso.
 
 *Caso de teste 03*
   - Retornar falha ao informar tamanho máximo negativo no campo de max_length.
-> Ao informar valor negativo para o limite de tamanho do fato, deve ser retornado erro informando que o tamanho do fato não pode ser menor que zero.
-
-> [!NOTE]
+    - Ao informar valor negativo para o limite de tamanho do fato, deve ser retornado erro informando que o tamanho do fato não pode ser menor que zero.
 > Teste executado com falha devido a response code inválido para o teste.
 
 *Caso de teste 04*
   - Retornar falha ao informar texto no parâmetro de tamanho máximo. 
-> Ao informar valor em texto para o limite de tamanho do fato, deve ser retornado erro informando que o tamanho do fato deve ser um número.
-
-> [!NOTE]
+    - Ao informar valor em texto para o limite de tamanho do fato, deve ser retornado erro informando que o tamanho do fato deve ser um número.
 > Teste executado com falha devido a response code inválido para o teste.
 
 *Caso de teste 05*
   - Retornar vazio ao informar zero no parâmetro de tamanho máximo.
-> Ao informar valor zero para o limite de tamanho do fato, deve ser retornado erro informando não foi possível encontrar um fato para o valor informado.
-
-> [!NOTE]
+    - Ao informar valor zero para o limite de tamanho do fato, deve ser retornado erro informando não foi possível encontrar um fato para o valor informado.
 > Teste executado com falha devido a response code inválido para o teste.
