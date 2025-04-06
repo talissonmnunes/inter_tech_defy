@@ -94,3 +94,29 @@ Após instalação inicial, para execução dos testes basta rodar o comando *np
   - Retornar vazio ao informar zero no parâmetro de limite de listagem.
     - Ao informar valor zero para o limite de listagem de fatos, deve ser retornado erro informando não foi possível encontrar um fato para o valor informado.
 > Teste executado com falha devido a response code inválido para o teste.
+
+### Cenário 03 - Retornar lista de raças de gatos.
+*Caso de teste 03.01*
+  - Retornar lista de raças de gatos com sucesso.
+    - Retorno de lista de raças de gatos com sucesso ao executar endpoint devidamente.
+> Teste executado com sucesso.
+
+*Caso de teste 03.02*
+  - Retornar lista de raças de gatos  dentro do limite de listagem informado.
+    - Ao informar um valor máximo para limite de listagem, deve ser retornado quantidade de raças de acotndo com o limite informado.
+> Teste executado com sucesso.
+
+*Caso de teste 03.03*
+  - Retornar falha ao informar limite de listagem negativo no campo de limit.
+    - Ao informar valor negativo para o limite de listagem de raças, deve ser retornado erro informando que o limite não pode ser menor que zero.
+> Teste executado com sucesso.
+
+*Caso de teste 03.04*
+  - Retornar falha ao informar texto no parâmetro de limite de listagem. 
+    - Ao informar valor em texto para o limite de listagem, deve ser retornado erro informando que o limite deve ser um número.
+> Teste executado com falha devido a response code inválido para o teste.
+
+*Caso de teste 03.05*
+  - Retornar vazio ao informar zero no parâmetro de limite de listagem.
+    - Ao informar valor zero para o limite de listagem, deve ser retornado erro informando não foi possível listar raças de acordo com o valor informado.
+> Teste executado com falha devido a response code inválido para o teste.
